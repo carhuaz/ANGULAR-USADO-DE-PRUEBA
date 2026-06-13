@@ -143,35 +143,9 @@ export class ReporteService {
     );
   }
 
-  completarConEvidencias(id: number, evidencias: string[], observacion: string): Observable<boolean> {
-    return this.http.post(`${this.apiUrl}/reportes/${id}/completar-con-evidencias`, { evidencias, observacion }).pipe(
-      map(() => true),
-      catchError(() => of(false))
-    );
-  }
-
   marcarVerificado(id: number, _usuario: string): Observable<boolean> {
     return this.http.post(`${this.apiUrl}/reportes/${id}/verificar`, {}).pipe(
       map(() => true)
-    );
-  }
-
-  obtenerReportesPorCuadrilla(cuadrillaId: number, estado?: string, page = 1, pageSize = 50): Observable<Paginacion<Reporte>> {
-    let params = new HttpParams().set('page', page).set('page_size', pageSize);
-    if (estado) params = params.set('estado', estado);
-    return this.paginada(`${this.apiUrl}/reportes/cuadrilla/${cuadrillaId}`, params);
-  }
-
-  obtenerAuditoriaValidaciones(page = 1, pageSize = 50): Observable<Paginacion<any>> {
-    let params = new HttpParams().set('page', page).set('page_size', pageSize);
-    return this.http.get<any>(`${this.apiUrl}/reportes/auditoria`, { params }).pipe(
-      map(res => ({
-        items: res.items,
-        total: res.total,
-        page: res.page,
-        page_size: res.page_size,
-        total_pages: res.total_pages
-      }))
     );
   }
 

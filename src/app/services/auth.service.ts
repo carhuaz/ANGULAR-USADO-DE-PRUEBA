@@ -85,7 +85,6 @@ export class AuthService {
   obtenerRutaInicial(): string {
     switch (this.usuarioSubject.value?.rol) {
       case 'Validador': return '/validacion';
-      case 'ResponsableCuadrilla': return '/mis-cuadrillas';
       case 'Administrador':
       case 'Ciudadano': return '/dashboard';
       default: return '/login';

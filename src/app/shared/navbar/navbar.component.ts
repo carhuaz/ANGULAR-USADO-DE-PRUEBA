@@ -33,15 +33,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
     'Validador': [
       { label: 'Validar reportes', ruta: '/validacion', icon: '✔️' }
     ],
-    'ResponsableCuadrilla': [
-      { label: 'Mis cuadrillas', ruta: '/mis-cuadrillas', icon: '🚚' }
-    ],
     'Administrador': [
       { label: 'Dashboard', ruta: '/dashboard', icon: '📊' },
       { label: 'Gestión de usuarios', ruta: '/admin/usuarios', icon: '👥' },
       { label: 'Gestión de cuadrillas', ruta: '/cuadrillas', icon: '🚚' },
-      { label: 'Estadísticas', ruta: '/estadisticas', icon: '📈' },
-      { label: 'Auditoría', ruta: '/admin/auditoria', icon: '🔍' }
+      { label: 'Estadísticas', ruta: '/estadisticas', icon: '📈' }
     ]
   };
 

@@ -82,20 +82,6 @@ export const routes: Routes = [
     data: { roles: ['Administrador'] }
   },
   {
-    path: 'mis-cuadrillas',
-    loadComponent: () =>
-      import('./pages/mis-cuadrillas/mis-cuadrillas.component').then(m => m.MisCuadrillasComponent),
-    canActivate: [RoleGuard],
-    data: { roles: ['ResponsableCuadrilla'] }
-  },
-  {
-    path: 'admin/auditoria',
-    loadComponent: () =>
-      import('./pages/admin-auditoria/admin-auditoria.component').then(m => m.AdminAuditoriaComponent),
-    canActivate: [RoleGuard],
-    data: { roles: ['Administrador'] }
-  },
-  {
     path: 'admin/usuarios',
     loadComponent: () =>
       import('./pages/admin-usuarios/admin-usuarios.component').then(m => m.AdminUsuariosComponent),

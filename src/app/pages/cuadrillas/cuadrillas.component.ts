@@ -67,7 +67,7 @@ export class CuadrillasComponent implements OnInit {
       this.cuadrillas = data;
     });
     this.usuarioService.obtenerUsuarios().subscribe(data => {
-      this.responsables = data.filter(u => u.rol === 'ResponsableCuadrilla');
+      this.responsables = data;
     });
   }
 

@@ -26,10 +26,6 @@ export class CuadrillaService {
     return this.http.get<Cuadrilla[]>(`${this.apiUrl}/cuadrillas/disponibles`);
   }
 
-  obtenerMisCuadrillas(): Observable<Cuadrilla[]> {
-    return this.http.get<Cuadrilla[]>(`${this.apiUrl}/cuadrillas/mis-cuadrillas`);
-  }
-
   asignarCuadrilla(reporteId: number, cuadrillaId: number): Observable<boolean> {
     return this.http.post(
       `${this.apiUrl}/cuadrillas/${cuadrillaId}/asignar-revision?reporte_id=${reporteId}`, {}

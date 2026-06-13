@@ -144,7 +144,6 @@ export class AdminUsuariosComponent implements OnInit {
     switch (rol) {
       case 'Administrador': return 'role-admin';
       case 'Validador': return 'role-validador';
-      case 'ResponsableCuadrilla': return 'role-cuadrilla';
       case 'Ciudadano': return 'role-ciudadano';
       default: return '';
     }
