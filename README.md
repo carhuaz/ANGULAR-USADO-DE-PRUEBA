@@ -794,3 +794,4 @@ SMTP_PASSWORD=tu_contraseña_de_aplicacion
 CORS_ORIGINS=http://localhost:4200,https://tudominio.com
 ```
 # ANGULAR-USADO-DE-PRUEBA
+# ANGULAR-USADO-DE-PRUEBA
